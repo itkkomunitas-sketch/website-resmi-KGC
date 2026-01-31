@@ -12,9 +12,9 @@ const groupsData = [
     },
     {
         id: 2,
-        name: "divisi astronomi",
+        name: "Divisi Astronomi Antariksa (Sains dan Observasi Langit)",
         category: "sains & astronomi",
-        description: "grup diskusi tentang astronomi dan eksplorasi luar angkasa.",
+        description: "Grup ini membahas fenomena alam semesta, bintang, planet, serta perkembangan riset astronomi dan teknologi antariksa.",
         members: 20,
         ideology: "sains & diskusi ilmiah",
         autonomy: "Sedang",
@@ -22,9 +22,9 @@ const groupsData = [
     },
     {
         id: 3,
-        name: "divisi cyber security",
+        name: "Divisi Keamanan Siber dan Perlindungan Informasi",
         category: "teknologi & keamanan siber",
-        description: "grup diskusi tentang keamanan siber, privasi digital, dan perlindungan data.",
+        description: " Grup ini menjadi ruang belajar bersama tentang keamanan jaringan, cyber awareness, ethical hacking, dan proteksi data pribadi.",
         members: 15,
         ideology: "keamanan & privasi digital",
         autonomy: "Tinggi",
@@ -146,4 +146,17 @@ document.addEventListener('DOMContentLoaded', function() {
             form.reset();
         });
     });
+});
+
+const mobileBtn = document.getElementById("mobileMenuBtn");
+const navLinks = document.getElementById("navLinks");
+
+mobileBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll("#navLinks a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
 });
